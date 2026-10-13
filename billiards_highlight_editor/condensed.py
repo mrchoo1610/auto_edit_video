@@ -1803,14 +1803,18 @@ def cmd_seo(args):
     project = os.path.abspath(args.project)
     P = _paths(project)
     doc = _load(P["racks"])
-    chapters_path = os.path.join(P["output"], "chapters.txt")
-    chapters_text = open(chapters_path, encoding="utf-8").read() if os.path.exists(chapters_path) else ""
     video = args.video
     if video:
         video = _abs(project, video)
     else:
         found = sorted(glob.glob(os.path.join(P["output"], "Condensed_*.mp4")), key=os.path.getmtime)
         video = found[-1] if found else None
+    chapters_path = os.path.join(P["output"], "chapters.txt")             # render without --out
+    if video and os.path.exists(os.path.splitext(video)[0] + "_chapters.txt"):    # render with --out NAME: NAME_chapters.txt
+        chapters_path = os.path.splitext(video)[0] + "_chapters.txt"
+    chapters_text = open(chapters_path, encoding="utf-8").read() if os.path.exists(chapters_path) else ""
+    print(f"video: {video}")
+    print(f"chapters: {chapters_path}")
     write_youtube_files(project, args, doc["p1"], doc["p2"], doc["race_to"], doc["racks"], chapters_text, video)
 
 

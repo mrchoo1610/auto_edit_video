@@ -18,7 +18,7 @@ highlight 60 giây/ván: ở đây **giữ mọi cú chọc** (kể cả trượ
 
 ## CÔNG THỨC CHỐT: V5c (dùng cái này, bỏ qua quy trình âm thanh cũ ở các mục sau)
 
-Người dùng chốt công thức này ngày 13/10/2026 sau khi so V3 (âm thanh), V4/V4b (âm thanh + công thức v2), V5/V5b/V5c (chuyển động). Trận mẫu race to 3: V5c = 32.6 phút, giảm 27.7 % so với 45.1 phút gốc. Trận mẫu race to 7 (10 ván, 3-7): **61.4 phút (V5d), giảm 31.3 % so với 89.3 phút gốc**.
+Người dùng chốt công thức này ngày 13/10/2026 (bản dùng cuối: **V5d** = V5c với `audit` đã sửa, race to 7 trận mẫu) sau khi so V3 (âm thanh), V4/V4b (âm thanh + công thức v2), V5/V5b/V5c (chuyển động). Trận mẫu race to 3: V5c = 32.6 phút, giảm 27.7 % so với 45.1 phút gốc. Trận mẫu race to 7 (10 ván, 3-7): **61.4 phút (V5d), giảm 31.3 % so với 89.3 phút gốc**.
 
 | Phần | Giá trị V5c | Ghi chú |
 |---|---|---|
@@ -183,6 +183,9 @@ python -m billiards_highlight_editor.condensed seo --project projects/<tên> --c
 
 - `youtube_metadata.md`: tiêu đề (kèm số ký tự, bản không lộ kết quả, các phương án khác), mô tả, thẻ (kèm tổng ký tự), hashtag, danh sách cần kiểm tra.
 - `youtube_description.txt`: mô tả thuần văn bản để dán thẳng vào YouTube Studio.
+- `seo --video output/<tên>.mp4` lấy mục lục từ `output/<tên>_chapters.txt` (render có `--out`); không có thì dùng `chapters.txt`. Mục lục phải khớp đúng video đã chọn (V5c và V5d có mốc ván khác nhau).
+- Tên cơ thủ lấy từ `racks.json` (`--p1/--p2` lúc `plan`), nên không dấu nếu bảng điểm không dấu; muốn có dấu cho tìm kiếm tiếng Việt thì thêm biến thể có dấu vào thẻ/mô tả thủ công (chính tả chưa xác nhận).
+- Ngày thi đấu: nếu thư mục project không có dạng `YYYY-MM-DD_...` thì truyền `--date`; ngày 12/10/2026 của trận mẫu suy từ tên project cũ và ngày sửa file gốc, cần người dùng xác nhận.
 - Code: `billiards_highlight_editor/condensed_seo.py`. Chỉ dùng dữ kiện có thật (cơ thủ, race to, tỷ số, chương, thời lượng, ngày từ tên thư mục project,
   và `--venue/--channel/--tournament` nếu có). Thiếu dữ kiện thì bỏ dòng đó, không bịa; file md liệt kê phần còn thiếu.
 
