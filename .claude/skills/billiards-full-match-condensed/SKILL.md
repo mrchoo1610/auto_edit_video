@@ -10,6 +10,8 @@ description: >-
 
 # Billiards Full Match Condensed
 
+> **Dữ liệu mẫu đã xóa (13/10/2026, người dùng yêu cầu):** hai file nguồn `1012.mp4`, `1012(1).mp4` (2 × ~2.2 GB, **không có trong git**, không khôi phục được) và các project cũ `projects/061026`, `061026_formula_v2`, `_motion`, `_motion2`, `_motion3`, `_race7` (phân tích và ảnh bảng điểm còn trong lịch sử git, video thì không). Các đường dẫn `projects/061026/raw/...` và số liệu của trận mẫu trong tài liệu này là ghi chép, không chạy lại được nếu không có file nguồn. Còn lại: `projects/061026_race7_fullracks/` (chỉ `analysis/` và `assets/`; `clips.json` trỏ tới file nguồn đã xóa).
+
 Mỗi trận là một project riêng `projects/YYYY-MM-DD_<P1>_vs_<P2>/` gồm `raw/ assets/ output/ temp/ analysis/ match_metadata.json`.
 Không để file ở thư mục gốc. `analysis/` là cache, giữ lại để chỉnh ngưỡng mà không phân tích lại.
 
@@ -242,9 +244,7 @@ python -m billiards_highlight_editor.condensed racks --project projects/<tên> .
 | **Đếm bi trên bàn rồi tìm bước giảm** (nền trung vị cả file hoặc một frame bàn trống) | Nhiễu ±1–2 bi ngang với tín hiệu (1 bi); khung "lớn" (người) xuất hiện ở hầu hết frame với nền cố định nên không lọc được frame sạch |
 | **So khớp theo kênh bão hòa trong vùng chân bàn** | Chỉ phân biệt được rack đứng ở một số ván; báo nhầm khi còn vài bi |
 
-Đã cài sẵn để thử hướng 3, **không còn dùng trong quy trình**: `models/` (MobileNet-SSD `mobilenet_iter_73000.caffemodel` ~22 MB + `deploy.prototxt`),
-`.venv_detect/` (OpenCV 4.14 + numpy riêng, vì **OpenCV 5.0 của dự án đã bỏ bộ đọc Caffe**: `readNetFromCaffe` báo "Caffe importer has been removed")
-và `billiards_highlight_editor/shooter_probe.py`. Có thể xóa cả ba nếu cần dọn chỗ. Nếu sau này cần mô hình khác, dùng định dạng ONNX hoặc chạy trong `.venv_detect`.
+**Đã xóa 13/10/2026** (người dùng yêu cầu dọn): `models/` (MobileNet-SSD), `.venv_detect/` (OpenCV 4.14 riêng) và `billiards_highlight_editor/shooter_probe.py`. Còn lấy lại được từ git (commit `bd3f58c` trở về trước). Lý do cần venv riêng: **OpenCV 5.0 của dự án đã bỏ bộ đọc Caffe** (`readNetFromCaffe` báo "Caffe importer has been removed"); nếu thử lại hướng này hãy dùng mô hình ONNX.
 
 ## Chạy thử race to N mà không làm hỏng bản đầy đủ
 

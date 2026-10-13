@@ -35,6 +35,8 @@ python -m billiards_highlight_editor.condensed render --project $P --zoom 1.3 --
 - `--by-rack` tự đặt `handshake = 0` (ván cuối đã kết thúc ở `e`). `racks`/`score` dùng như condensed (cần truyền lại `--breaks/--wins` nếu muốn dựng lại từ mốc).
 - Chương YouTube: mỗi ván một chương (`0:00 Ván 1: ...`), đủ dài để hợp lệ.
 
+> Trận mẫu race to 7: hai file nguồn và các project cũ đã bị xóa (13/10/2026), nên các lệnh và mốc dưới đây là ghi chép, không chạy lại được nếu không có file nguồn.
+
 ## Cách đặt mốc `t/e` của mỗi ván (người dùng yêu cầu 13/10/2026: bi cái phải dừng hẳn mới kết thúc)
 
 Bản V1 cắt ở mốc cũ (bi 9 rơi + 1.5 s) và **cắt giữa lúc bi cái còn lăn** (ván 1: bi cái còn trôi đến lỗ góc ở 450.6 s, cắt ở 450.0 s). Quy tắc mới, đo bằng ảnh từng 0.25–0.5 s quanh cuối ván:
