@@ -1,0 +1,13 @@
+﻿# Python venv
+.venv*/
+__pycache__/
+*.pyc
+
+# Video / media lớn (vượt giới hạn GitHub 100MB)
+*.mp4
+*.mov
+*.mkv
+*.avi
+
+# Log
+*.log

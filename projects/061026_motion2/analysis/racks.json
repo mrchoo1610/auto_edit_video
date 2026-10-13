@@ -1,0 +1,87 @@
+{
+  "p1": "Chung Choo",
+  "p2": "Khuong Lieu",
+  "race_to": 3,
+  "racks": [
+    {
+      "rack": 1,
+      "first_clip": 1,
+      "last_clip": 16,
+      "break_source": 0,
+      "break_t": 31.92,
+      "rack_check": "manual",
+      "win_source": 0,
+      "win_t": 448.5,
+      "winner": 1,
+      "include": true,
+      "score_after": [
+        1,
+        0
+      ]
+    },
+    {
+      "rack": 2,
+      "first_clip": 17,
+      "last_clip": 37,
+      "break_source": 0,
+      "break_t": 497.35,
+      "rack_check": "manual",
+      "win_source": 0,
+      "win_t": 1032.5,
+      "winner": 1,
+      "include": true,
+      "score_after": [
+        2,
+        0
+      ]
+    },
+    {
+      "rack": 3,
+      "first_clip": 38,
+      "last_clip": 62,
+      "break_source": 0,
+      "break_t": 1069.8,
+      "rack_check": "manual",
+      "win_source": 0,
+      "win_t": 1638.5,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        2,
+        1
+      ]
+    },
+    {
+      "rack": 4,
+      "first_clip": 63,
+      "last_clip": 83,
+      "break_source": 0,
+      "break_t": 1671.9,
+      "rack_check": "manual",
+      "win_source": 0,
+      "win_t": 2160.5,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        2,
+        2
+      ]
+    },
+    {
+      "rack": 5,
+      "first_clip": 85,
+      "last_clip": 106,
+      "break_source": 0,
+      "break_t": 2211.1,
+      "rack_check": "manual",
+      "win_source": 1,
+      "win_t": 23.5,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        2,
+        3
+      ]
+    }
+  ]
+}

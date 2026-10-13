@@ -1,0 +1,1247 @@
+{
+  "diff_px": 200,
+  "min_gap_sec": 3.0,
+  "cuts": [
+    {
+      "out_time": 16.0,
+      "from": [
+        0,
+        39.4
+      ],
+      "to": [
+        0,
+        59.3
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 19.9,
+      "diff_px": 51,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 72.7,
+      "from": [
+        0,
+        116.0
+      ],
+      "to": [
+        0,
+        119.1
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 3.1,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 97.0,
+      "from": [
+        0,
+        143.4
+      ],
+      "to": [
+        0,
+        172.2
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 28.8,
+      "diff_px": 346,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 141.8,
+      "from": [
+        0,
+        217.1
+      ],
+      "to": [
+        0,
+        223.2
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 6.1,
+      "diff_px": 1180,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 164.1,
+      "from": [
+        0,
+        246.2
+      ],
+      "to": [
+        0,
+        251.0
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 4.8,
+      "diff_px": 199,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 176.9,
+      "from": [
+        0,
+        263.8
+      ],
+      "to": [
+        0,
+        268.7
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 4.8,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 183.7,
+      "from": [
+        0,
+        275.4
+      ],
+      "to": [
+        0,
+        288.2
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 12.8,
+      "diff_px": 813,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 223.9,
+      "from": [
+        0,
+        329.8
+      ],
+      "to": [
+        0,
+        338.8
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 9.1,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 232.8,
+      "from": [
+        0,
+        347.8
+      ],
+      "to": [
+        0,
+        357.3
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 9.6,
+      "diff_px": 62,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 259.9,
+      "from": [
+        0,
+        384.4
+      ],
+      "to": [
+        0,
+        393.2
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 8.8,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 271.4,
+      "from": [
+        0,
+        404.7
+      ],
+      "to": [
+        0,
+        409.9
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 5.2,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 284.7,
+      "from": [
+        0,
+        423.2
+      ],
+      "to": [
+        0,
+        444.3
+      ],
+      "rack": 1,
+      "to_rack": 1,
+      "gap_sec": 21.1,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 290.4,
+      "from": [
+        0,
+        450.0
+      ],
+      "to": [
+        0,
+        492.9
+      ],
+      "rack": 1,
+      "to_rack": 2,
+      "gap_sec": 42.9,
+      "diff_px": 1465,
+      "rack_change": true,
+      "flagged": false
+    },
+    {
+      "out_time": 344.6,
+      "from": [
+        0,
+        547.0
+      ],
+      "to": [
+        0,
+        552.6
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 5.6,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 371.8,
+      "from": [
+        0,
+        579.8
+      ],
+      "to": [
+        0,
+        585.6
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 5.8,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 410.2,
+      "from": [
+        0,
+        624.0
+      ],
+      "to": [
+        0,
+        627.1
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 3.1,
+      "diff_px": 526,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 421.1,
+      "from": [
+        0,
+        638.0
+      ],
+      "to": [
+        0,
+        645.3
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 7.3,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 430.3,
+      "from": [
+        0,
+        654.5
+      ],
+      "to": [
+        0,
+        658.9
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 4.4,
+      "diff_px": 537,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 441.7,
+      "from": [
+        0,
+        670.3
+      ],
+      "to": [
+        0,
+        680.3
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 10.0,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 451.7,
+      "from": [
+        0,
+        690.3
+      ],
+      "to": [
+        0,
+        695.1
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 4.8,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 481.6,
+      "from": [
+        0,
+        724.9
+      ],
+      "to": [
+        0,
+        735.0
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 10.1,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 491.7,
+      "from": [
+        0,
+        745.2
+      ],
+      "to": [
+        0,
+        749.5
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 4.3,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 501.9,
+      "from": [
+        0,
+        759.7
+      ],
+      "to": [
+        0,
+        769.6
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 9.9,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 523.1,
+      "from": [
+        0,
+        790.8
+      ],
+      "to": [
+        0,
+        801.2
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 10.4,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 580.0,
+      "from": [
+        0,
+        859.9
+      ],
+      "to": [
+        0,
+        873.2
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 13.2,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 652.7,
+      "from": [
+        0,
+        947.2
+      ],
+      "to": [
+        0,
+        950.8
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 3.7,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 663.2,
+      "from": [
+        0,
+        961.3
+      ],
+      "to": [
+        0,
+        982.8
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 21.5,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 675.7,
+      "from": [
+        0,
+        995.4
+      ],
+      "to": [
+        0,
+        1000.9
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 5.5,
+      "diff_px": 229,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 692.0,
+      "from": [
+        0,
+        1018.8
+      ],
+      "to": [
+        0,
+        1023.2
+      ],
+      "rack": 2,
+      "to_rack": 2,
+      "gap_sec": 4.3,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 702.8,
+      "from": [
+        0,
+        1034.0
+      ],
+      "to": [
+        0,
+        1065.3
+      ],
+      "rack": 2,
+      "to_rack": 3,
+      "gap_sec": 31.3,
+      "diff_px": 1290,
+      "rack_change": true,
+      "flagged": false
+    },
+    {
+      "out_time": 713.8,
+      "from": [
+        0,
+        1076.2
+      ],
+      "to": [
+        0,
+        1084.2
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 8.0,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 727.3,
+      "from": [
+        0,
+        1097.8
+      ],
+      "to": [
+        0,
+        1107.6
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 9.8,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 768.1,
+      "from": [
+        0,
+        1148.4
+      ],
+      "to": [
+        0,
+        1154.5
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 6.1,
+      "diff_px": 51,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 793.9,
+      "from": [
+        0,
+        1181.9
+      ],
+      "to": [
+        0,
+        1191.2
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 9.3,
+      "diff_px": 84,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 802.4,
+      "from": [
+        0,
+        1199.8
+      ],
+      "to": [
+        0,
+        1202.8
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 3.0,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 871.5,
+      "from": [
+        0,
+        1276.8
+      ],
+      "to": [
+        0,
+        1282.2
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 5.4,
+      "diff_px": 125,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 904.2,
+      "from": [
+        0,
+        1314.9
+      ],
+      "to": [
+        0,
+        1319.2
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 4.3,
+      "diff_px": 357,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 933.9,
+      "from": [
+        0,
+        1348.9
+      ],
+      "to": [
+        0,
+        1351.9
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 3.0,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 969.9,
+      "from": [
+        0,
+        1387.9
+      ],
+      "to": [
+        0,
+        1396.9
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 9.0,
+      "diff_px": 552,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 983.0,
+      "from": [
+        0,
+        1410.1
+      ],
+      "to": [
+        0,
+        1418.8
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 8.8,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1005.4,
+      "from": [
+        0,
+        1441.2
+      ],
+      "to": [
+        0,
+        1447.6
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 6.3,
+      "diff_px": 163,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1036.5,
+      "from": [
+        0,
+        1480.3
+      ],
+      "to": [
+        0,
+        1483.8
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 3.4,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1042.2,
+      "from": [
+        0,
+        1489.4
+      ],
+      "to": [
+        0,
+        1497.1
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 7.7,
+      "diff_px": 48,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1072.2,
+      "from": [
+        0,
+        1527.2
+      ],
+      "to": [
+        0,
+        1551.2
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 24.1,
+      "diff_px": 432,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 1087.9,
+      "from": [
+        0,
+        1568.1
+      ],
+      "to": [
+        0,
+        1583.7
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 15.6,
+      "diff_px": 24,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1105.4,
+      "from": [
+        0,
+        1602.3
+      ],
+      "to": [
+        0,
+        1612.8
+      ],
+      "rack": 3,
+      "to_rack": 3,
+      "gap_sec": 10.4,
+      "diff_px": 25,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1131.2,
+      "from": [
+        0,
+        1640.0
+      ],
+      "to": [
+        0,
+        1667.4
+      ],
+      "rack": 3,
+      "to_rack": 4,
+      "gap_sec": 27.4,
+      "diff_px": 32642,
+      "rack_change": true,
+      "flagged": false
+    },
+    {
+      "out_time": 1144.0,
+      "from": [
+        0,
+        1680.2
+      ],
+      "to": [
+        0,
+        1684.2
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 3.9,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1204.2,
+      "from": [
+        0,
+        1747.9
+      ],
+      "to": [
+        0,
+        1753.6
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 5.7,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1293.9,
+      "from": [
+        0,
+        1843.6
+      ],
+      "to": [
+        0,
+        1847.3
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 3.8,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1303.8,
+      "from": [
+        0,
+        1857.2
+      ],
+      "to": [
+        0,
+        1866.1
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 8.8,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1336.0,
+      "from": [
+        0,
+        1898.3
+      ],
+      "to": [
+        0,
+        1902.9
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 4.6,
+      "diff_px": 22,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1345.5,
+      "from": [
+        0,
+        1912.4
+      ],
+      "to": [
+        0,
+        1919.4
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 7.0,
+      "diff_px": 25,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1353.0,
+      "from": [
+        0,
+        1926.8
+      ],
+      "to": [
+        0,
+        1936.1
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 9.2,
+      "diff_px": 232,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 1380.1,
+      "from": [
+        0,
+        1963.2
+      ],
+      "to": [
+        0,
+        1988.8
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 25.5,
+      "diff_px": 60,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1390.5,
+      "from": [
+        0,
+        1999.1
+      ],
+      "to": [
+        0,
+        2004.2
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 5.2,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1432.5,
+      "from": [
+        0,
+        2046.3
+      ],
+      "to": [
+        0,
+        2051.5
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 5.2,
+      "diff_px": 142,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1490.5,
+      "from": [
+        0,
+        2113.8
+      ],
+      "to": [
+        0,
+        2125.3
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 11.6,
+      "diff_px": 268,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 1501.4,
+      "from": [
+        0,
+        2136.2
+      ],
+      "to": [
+        0,
+        2149.9
+      ],
+      "rack": 4,
+      "to_rack": 4,
+      "gap_sec": 13.8,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1513.5,
+      "from": [
+        0,
+        2162.0
+      ],
+      "to": [
+        0,
+        2206.6
+      ],
+      "rack": 4,
+      "to_rack": 5,
+      "gap_sec": 44.6,
+      "diff_px": 4057,
+      "rack_change": true,
+      "flagged": false
+    },
+    {
+      "out_time": 1526.1,
+      "from": [
+        0,
+        2219.2
+      ],
+      "to": [
+        0,
+        2231.8
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 12.6,
+      "diff_px": 40,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1546.9,
+      "from": [
+        0,
+        2252.7
+      ],
+      "to": [
+        0,
+        2262.6
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 9.9,
+      "diff_px": 1145,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 1619.1,
+      "from": [
+        0,
+        2337.1
+      ],
+      "to": [
+        0,
+        2344.2
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 7.2,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1645.2,
+      "from": [
+        0,
+        2370.3
+      ],
+      "to": [
+        0,
+        2379.8
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 9.5,
+      "diff_px": 81,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1655.4,
+      "from": [
+        0,
+        2390.1
+      ],
+      "to": [
+        0,
+        2399.5
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 9.4,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1664.9,
+      "from": [
+        0,
+        2409.0
+      ],
+      "to": [
+        0,
+        2414.7
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 5.7,
+      "diff_px": 687,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 1684.4,
+      "from": [
+        0,
+        2434.6
+      ],
+      "to": [
+        0,
+        2439.6
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 5.0,
+      "diff_px": 235,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 1710.3,
+      "from": [
+        0,
+        2465.4
+      ],
+      "to": [
+        0,
+        2473.2
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 7.8,
+      "diff_px": 79,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1742.9,
+      "from": [
+        0,
+        2507.8
+      ],
+      "to": [
+        0,
+        2511.0
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 3.2,
+      "diff_px": 132,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1757.7,
+      "from": [
+        0,
+        2525.8
+      ],
+      "to": [
+        0,
+        2547.2
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 21.4,
+      "diff_px": 164,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1766.7,
+      "from": [
+        0,
+        2556.2
+      ],
+      "to": [
+        0,
+        2579.2
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 23.0,
+      "diff_px": 1608,
+      "rack_change": false,
+      "flagged": true
+    },
+    {
+      "out_time": 1776.0,
+      "from": [
+        0,
+        2588.5
+      ],
+      "to": [
+        0,
+        2596.1
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": 7.6,
+      "diff_px": 0,
+      "rack_change": false,
+      "flagged": false
+    },
+    {
+      "out_time": 1845.2,
+      "from": [
+        0,
+        2673.7
+      ],
+      "to": [
+        1,
+        19.8
+      ],
+      "rack": 5,
+      "to_rack": 5,
+      "gap_sec": null,
+      "diff_px": 221,
+      "rack_change": false,
+      "flagged": true
+    }
+  ]
+}
