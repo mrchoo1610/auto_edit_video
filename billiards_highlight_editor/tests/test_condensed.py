@@ -638,5 +638,47 @@ class TestFFmpeg(unittest.TestCase):
         self.assertIsNone(args.venue)
 
 
+class TestRackMode(unittest.TestCase):
+    def setUp(self):
+        self.cfg = CondensedConfig()
+
+    def test_one_clip_per_rack_from_break_to_end_cut(self):
+        clips = cd.clips_by_rack(["31.9", "497.3"], ["448.5/450", "1032.5/1034"], {0: 2700.0}, self.cfg)
+        self.assertEqual(len(clips), 2)
+        self.assertAlmostEqual(clips[0].start, 31.9 - self.cfg.break_pre_roll_sec)
+        self.assertEqual(clips[0].end, 450.0)
+        self.assertTrue(clips[0].is_break and clips[1].is_break)
+        self.assertAlmostEqual(clips[1].start, 497.3 - self.cfg.break_pre_roll_sec)   # the racking 450 -> 492.8 is not in any clip
+        self.assertEqual(clips[1].end, 1034.0)
+
+    def test_end_defaults_to_the_win_plus_tail(self):
+        clips = cd.clips_by_rack(["10.0"], ["100.0"], {0: 500.0}, self.cfg)
+        self.assertAlmostEqual(clips[0].end, 100.0 + self.cfg.tail_sec)
+
+    def test_rack_over_a_file_boundary_is_one_clip_per_file(self):
+        clips = cd.clips_by_rack(["2211.1"], ["1:23.5/26"], {0: 2682.0, 1: 2682.0}, self.cfg)
+        self.assertEqual([(c.source, c.end) for c in clips], [(0, 2682.0), (1, 26.0)])
+        self.assertEqual([c.is_break for c in clips], [True, False])
+        self.assertEqual(clips[1].start, 0.0)
+        racks = cd.segment_racks(clips)
+        self.assertEqual(len(racks), 1)
+        self.assertEqual((racks[0]["first_clip"], racks[0]["last_clip"]), (0, 1))
+
+    def test_rejects_unequal_counts_and_backwards_racks(self):
+        with self.assertRaises(ValueError):
+            cd.clips_by_rack(["10.0", "200.0"], ["100.0/102"], {0: 500.0}, self.cfg)
+        with self.assertRaises(ValueError):
+            cd.clips_by_rack(["100.0"], ["90.0/92"], {0: 500.0}, self.cfg)
+
+    def test_rack_to_rack_cut_gets_the_soft_fade_and_nothing_inside_a_rack_is_cut(self):
+        clips = cd.clips_by_rack(["10.0", "200.0"], ["100.0/102", "300.0/302"], {0: 500.0}, self.cfg)
+        racks = cd.segment_racks(clips)
+        cd.apply_winners(racks, [1, 2], 7)
+        items = cd.build_render_plan(clips, racks, self.cfg)
+        self.assertEqual(len(items), 2)
+        self.assertTrue(items[0].join_out and items[1].join_in)
+        self.assertEqual((items[0].after, items[1].after), ((1, 0), (1, 1)))
+
+
 if __name__ == "__main__":
     unittest.main()

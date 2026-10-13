@@ -110,6 +110,7 @@ class CondensedConfig:
     score_sfx_volume: float = 0.25       # peak level of the click (fraction of full scale)
     zoom_center: Optional[List[float]] = None   # [cx, cy] source pixels = middle of the whole table (rails included); None = centre of table_roi
     style: str = "swiss"                # scoreboard look: "swiss" (templates/swiss_style) | "classic" (ScoreboardEngine)
+    rack_mode: bool = False             # `plan --by-rack`: one uninterrupted clip per rack, break -> last 9-ball; only the racking is cut
 
 
 def config_from_dict(d: Dict) -> CondensedConfig:
@@ -891,6 +892,42 @@ def apply_manual_breaks(
     return [i for i, c in enumerate(clips) if c.is_break]
 
 
+def split_source_time(body: str) -> Tuple[int, float]:
+    """"1:23.5" -> (1, 23.5); "23.5" -> (0, 23.5)."""
+    src, _, t = body.rpartition(":")
+    return (int(src) if src else 0), float(t)
+
+
+def clips_by_rack(
+    break_tokens: Sequence[str],
+    win_tokens: Sequence[str],
+    durations: Dict[int, float],
+    cfg: CondensedConfig,
+) -> List[Clip]:
+    """Rack mode: one uninterrupted clip per rack, from break_pre_roll_sec before the break to the end of the rack
+    (win token "t/e": e = where the racking starts; without /e it is t + tail_sec). Nothing inside a rack is cut.
+    A rack that runs over the end of one file into the next becomes one clip per file."""
+    if len(break_tokens) != len(win_tokens):
+        raise ValueError(f"{len(break_tokens)} breaks but {len(win_tokens)} win times: rack mode needs one of each per rack")
+    clips: List[Clip] = []
+    for n, (btok, wtok) in enumerate(zip(break_tokens, win_tokens), start=1):
+        bsrc, bt = split_source_time(btok)
+        body, _, cut = wtok.partition("/")
+        wsrc, wt = split_source_time(body)
+        end_t = float(cut) if cut else wt + cfg.tail_sec
+        start_t = max(0.0, bt - cfg.break_pre_roll_sec)
+        if (wsrc, end_t) <= (bsrc, bt):
+            raise ValueError(f"rack {n}: ends at {wsrc}:{end_t} which is not after its break at {bsrc}:{bt}")
+        for src in range(bsrc, wsrc + 1):
+            a = start_t if src == bsrc else 0.0
+            b = end_t if src == wsrc else durations.get(src, 0.0)
+            if b - a <= 0:
+                continue
+            clips.append(Clip(src, round(a, 3), round(b, 3), bt if src == bsrc else round(a, 3), is_break=(src == bsrc),
+                              rack_check="manual" if src == bsrc else "", last_sound_t=wt if src == wsrc else round(a, 3)))
+    return clips
+
+
 def trim_before_breaks(
     clips: List[Clip],
     default_sec: float = 0.0,
@@ -1368,9 +1405,46 @@ def _write_racks(project: str, args, clips: List[Clip], sources: List[str], cfg:
         print("warning:", w)
 
 
+def _source_durations(project: str, sources: Sequence[str]) -> Dict[int, float]:
+    import cv2
+    durations = {}
+    for i, s in enumerate(sources):
+        cap = cv2.VideoCapture(_abs(project, s))
+        durations[i] = (cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0) / (cap.get(cv2.CAP_PROP_FPS) or 30.0)
+        cap.release()
+    return durations
+
+
+def cmd_plan_by_rack(args, cfg: CondensedConfig):
+    """Rack mode: no detection at all. Clips come straight from --breaks and --wins, so the video is the whole of every rack."""
+    if not (args.breaks and args.wins):
+        raise SystemExit("--by-rack needs --breaks and --wins (one break and one 'win/end' time per rack)")
+    project = os.path.abspath(args.project)
+    P = _paths(project)
+    cfg.rack_mode = True
+    cfg.handshake_sec = 0.0                                    # the last rack already ends where the racking would start
+    if getattr(args, "break_pre_roll_sec", None) is not None:
+        cfg.break_pre_roll_sec = args.break_pre_roll_sec
+    if getattr(args, "tail_sec", None) is not None:
+        cfg.tail_sec = args.tail_sec
+    cfg.join_video_fade_sec = args.fade_video if args.fade_video is not None else 0.5     # rack-to-rack: softer than the 0.15 s of condensed
+    cfg.join_audio_fade_sec = args.fade_audio if args.fade_audio is not None else 0.5
+    if args.table_roi:
+        cfg.table_roi = _parse_roi(args.table_roi)
+    tokens, _ = parse_break_tokens(args.breaks)
+    clips = clips_by_rack(tokens, re.split(r"[,\s]+", args.wins.strip()), _source_durations(project, args.sources), cfg)
+    doc = {"sources": list(args.sources), "config": asdict(cfg), "clips": [asdict(c) for c in clips]}
+    _save(P["clips"], doc)
+    _save(P["clips_auto"], doc)
+    print(f"rack mode: {len(clips)} clips, {sum(c.end - c.start for c in clips) / 60:.1f} min -> {P['clips']}")
+    _write_racks(project, args, clips, list(args.sources), cfg)
+
+
 def cmd_plan(args):
     project = os.path.abspath(args.project)
     cfg = CondensedConfig()
+    if getattr(args, "by_rack", False):
+        return cmd_plan_by_rack(args, cfg)
     if getattr(args, "motion_mode", False):
         cfg.motion_mode = True
     for name in ("still_energy", "min_motion_energy", "pre_roll_sec", "tail_sec", "max_clip_sec",
@@ -1649,12 +1723,7 @@ def cmd_render(args):
     p1, p2, race_to = doc["p1"], doc["p2"], doc["race_to"]
     ffmpeg = _ffmpeg_exe(args.ffmpeg)
 
-    import cv2
-    durations = {}
-    for i, s in enumerate(sources):
-        cap = cv2.VideoCapture(_abs(project, s))
-        durations[i] = (cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0) / (cap.get(cv2.CAP_PROP_FPS) or 30.0)
-        cap.release()
+    durations = _source_durations(project, sources)
     items = build_render_plan(clips, doc["racks"], cfg, durations)
     print(f"{len(items)} clips, {sum(i.end - i.start for i in items) / 60:.1f} min")
 
@@ -1863,6 +1932,11 @@ def main(argv: Optional[Sequence[str]] = None):
     p.add_argument("--min-onset-rise", dest="min_onset_rise", type=float, help="onset must exceed the pre-strike level by this much (default 0.2)")
     p.add_argument("--shot-cap", dest="shot_cap_sec", type=float, help="max seconds a shot lasts after the strike (0 = off); cuts people walking around the table")
     p.add_argument("--break-percentile", dest="break_level_percentile", type=float)
+    p.add_argument("--by-rack", dest="by_rack", action="store_true",
+                   help="FULL RACKS: no detection; one uninterrupted clip per rack from the break to the last 9-ball, only the racking is cut (needs --breaks and --wins 't/e')")
+    p.add_argument("--break-pre-roll", dest="break_pre_roll_sec", type=float, help="seconds kept before each break (default 4.5)")
+    p.add_argument("--fade-video", type=float, help="--by-rack: picture fade each side of a rack-to-rack cut (default 0.5)")
+    p.add_argument("--fade-audio", type=float, help="--by-rack: audio fade each side of a rack-to-rack cut (default 0.5)")
     p.set_defaults(fn=cmd_plan)
 
     p = sub.add_parser("roi", help="preview the table ROI on one frame")

@@ -1,0 +1,167 @@
+{
+  "p1": "CHUNG CHOO",
+  "p2": "KHUONG LIEU",
+  "race_to": 7,
+  "racks": [
+    {
+      "rack": 1,
+      "first_clip": 0,
+      "last_clip": 0,
+      "break_source": 0,
+      "break_t": 31.92,
+      "rack_check": "manual",
+      "win_source": 0,
+      "win_t": 448.5,
+      "winner": 1,
+      "include": true,
+      "score_after": [
+        1,
+        0
+      ]
+    },
+    {
+      "rack": 2,
+      "first_clip": 1,
+      "last_clip": 1,
+      "break_source": 0,
+      "break_t": 497.35,
+      "rack_check": "manual",
+      "win_source": 0,
+      "win_t": 1027.25,
+      "winner": 1,
+      "include": true,
+      "score_after": [
+        2,
+        0
+      ]
+    },
+    {
+      "rack": 3,
+      "first_clip": 2,
+      "last_clip": 2,
+      "break_source": 0,
+      "break_t": 1069.8,
+      "rack_check": "manual",
+      "win_source": 0,
+      "win_t": 1640.5,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        2,
+        1
+      ]
+    },
+    {
+      "rack": 4,
+      "first_clip": 3,
+      "last_clip": 3,
+      "break_source": 0,
+      "break_t": 1671.9,
+      "rack_check": "manual",
+      "win_source": 0,
+      "win_t": 2155.0,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        2,
+        2
+      ]
+    },
+    {
+      "rack": 5,
+      "first_clip": 4,
+      "last_clip": 5,
+      "break_source": 0,
+      "break_t": 2211.1,
+      "rack_check": "manual",
+      "win_source": 1,
+      "win_t": 23.5,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        2,
+        3
+      ]
+    },
+    {
+      "rack": 6,
+      "first_clip": 6,
+      "last_clip": 6,
+      "break_source": 1,
+      "break_t": 81.2,
+      "rack_check": "manual",
+      "win_source": 1,
+      "win_t": 627.3,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        2,
+        4
+      ]
+    },
+    {
+      "rack": 7,
+      "first_clip": 7,
+      "last_clip": 7,
+      "break_source": 1,
+      "break_t": 674.56,
+      "rack_check": "manual",
+      "win_source": 1,
+      "win_t": 975.0,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        2,
+        5
+      ]
+    },
+    {
+      "rack": 8,
+      "first_clip": 8,
+      "last_clip": 8,
+      "break_source": 1,
+      "break_t": 1032.2,
+      "rack_check": "manual",
+      "win_source": 1,
+      "win_t": 1607.3,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        2,
+        6
+      ]
+    },
+    {
+      "rack": 9,
+      "first_clip": 9,
+      "last_clip": 9,
+      "break_source": 1,
+      "break_t": 1643.3,
+      "rack_check": "manual",
+      "win_source": 1,
+      "win_t": 1946.0,
+      "winner": 1,
+      "include": true,
+      "score_after": [
+        3,
+        6
+      ]
+    },
+    {
+      "rack": 10,
+      "first_clip": 10,
+      "last_clip": 10,
+      "break_source": 1,
+      "break_t": 2028.0,
+      "rack_check": "manual",
+      "win_source": 1,
+      "win_t": 2518.5,
+      "winner": 2,
+      "include": true,
+      "score_after": [
+        3,
+        7
+      ]
+    }
+  ]
+}
