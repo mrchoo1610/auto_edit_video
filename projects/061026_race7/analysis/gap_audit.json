@@ -1,5 +1,5 @@
 {
-  "diff_px": 200,
+  "diff_px": 100,
   "min_gap_sec": 3.0,
   "cuts": [
     {
@@ -74,7 +74,7 @@
       "clip_from": 6,
       "clip_to": 7,
       "gap_sec": 4.8,
-      "diff_px": 76,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -93,7 +93,7 @@
       "clip_from": 9,
       "clip_to": 10,
       "gap_sec": 4.8,
-      "diff_px": 199,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -169,7 +169,7 @@
       "clip_from": 15,
       "clip_to": 16,
       "gap_sec": 9.6,
-      "diff_px": 62,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -245,7 +245,7 @@
       "clip_from": 19,
       "clip_to": 20,
       "gap_sec": 42.9,
-      "diff_px": 1465,
+      "diff_px": 1074,
       "rack_change": true,
       "flagged": false
     },
@@ -302,9 +302,9 @@
       "clip_from": 22,
       "clip_to": 23,
       "gap_sec": 3.1,
-      "diff_px": 526,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 490.2,
@@ -492,9 +492,9 @@
       "clip_from": 37,
       "clip_to": 38,
       "gap_sec": 5.5,
-      "diff_px": 229,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 740.5,
@@ -530,7 +530,7 @@
       "clip_from": 40,
       "clip_to": 41,
       "gap_sec": 31.3,
-      "diff_px": 1290,
+      "diff_px": 1115,
       "rack_change": true,
       "flagged": false
     },
@@ -606,7 +606,7 @@
       "clip_from": 45,
       "clip_to": 46,
       "gap_sec": 9.3,
-      "diff_px": 84,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -646,7 +646,7 @@
       "gap_sec": 5.4,
       "diff_px": 125,
       "rack_change": false,
-      "flagged": false
+      "flagged": true
     },
     {
       "out_time": 952.7,
@@ -663,9 +663,9 @@
       "clip_from": 50,
       "clip_to": 51,
       "gap_sec": 4.3,
-      "diff_px": 357,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 982.4,
@@ -701,9 +701,9 @@
       "clip_from": 52,
       "clip_to": 53,
       "gap_sec": 9.0,
-      "diff_px": 552,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 1031.5,
@@ -739,7 +739,7 @@
       "clip_from": 54,
       "clip_to": 55,
       "gap_sec": 6.3,
-      "diff_px": 163,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -777,7 +777,7 @@
       "clip_from": 57,
       "clip_to": 58,
       "gap_sec": 7.7,
-      "diff_px": 48,
+      "diff_px": 25,
       "rack_change": false,
       "flagged": false
     },
@@ -834,7 +834,7 @@
       "clip_from": 62,
       "clip_to": 63,
       "gap_sec": 15.6,
-      "diff_px": 24,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -853,7 +853,7 @@
       "clip_from": 64,
       "clip_to": 65,
       "gap_sec": 10.4,
-      "diff_px": 25,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -872,7 +872,7 @@
       "clip_from": 66,
       "clip_to": 67,
       "gap_sec": 27.4,
-      "diff_px": 32642,
+      "diff_px": 0,
       "rack_change": true,
       "flagged": false
     },
@@ -967,7 +967,7 @@
       "clip_from": 75,
       "clip_to": 76,
       "gap_sec": 4.6,
-      "diff_px": 22,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -986,7 +986,7 @@
       "clip_from": 76,
       "clip_to": 77,
       "gap_sec": 7.0,
-      "diff_px": 25,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1005,9 +1005,9 @@
       "clip_from": 77,
       "clip_to": 78,
       "gap_sec": 9.2,
-      "diff_px": 232,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 1443.1,
@@ -1024,7 +1024,7 @@
       "clip_from": 79,
       "clip_to": 80,
       "gap_sec": 19.8,
-      "diff_px": 44,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1062,7 +1062,7 @@
       "clip_from": 81,
       "clip_to": 82,
       "gap_sec": 5.2,
-      "diff_px": 142,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1081,9 +1081,9 @@
       "clip_from": 86,
       "clip_to": 87,
       "gap_sec": 11.6,
-      "diff_px": 268,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 1564.4,
@@ -1119,7 +1119,7 @@
       "clip_from": 88,
       "clip_to": 90,
       "gap_sec": 44.6,
-      "diff_px": 4057,
+      "diff_px": 0,
       "rack_change": true,
       "flagged": false
     },
@@ -1138,7 +1138,7 @@
       "clip_from": 90,
       "clip_to": 91,
       "gap_sec": 12.6,
-      "diff_px": 40,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1176,7 +1176,7 @@
       "clip_from": 94,
       "clip_to": 95,
       "gap_sec": 9.5,
-      "diff_px": 81,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1214,9 +1214,9 @@
       "clip_from": 98,
       "clip_to": 99,
       "gap_sec": 5.0,
-      "diff_px": 235,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 1785.4,
@@ -1233,7 +1233,7 @@
       "clip_from": 99,
       "clip_to": 100,
       "gap_sec": 7.8,
-      "diff_px": 79,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1252,7 +1252,7 @@
       "clip_from": 102,
       "clip_to": 103,
       "gap_sec": 3.2,
-      "diff_px": 132,
+      "diff_px": 72,
       "rack_change": false,
       "flagged": false
     },
@@ -1271,7 +1271,7 @@
       "clip_from": 103,
       "clip_to": 104,
       "gap_sec": 21.4,
-      "diff_px": 164,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1290,7 +1290,7 @@
       "clip_from": 104,
       "clip_to": 105,
       "gap_sec": 7.3,
-      "diff_px": 45,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1328,7 +1328,7 @@
       "clip_from": 110,
       "clip_to": 111,
       "gap_sec": null,
-      "diff_px": 26,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1347,7 +1347,7 @@
       "clip_from": 111,
       "clip_to": 113,
       "gap_sec": 50.7,
-      "diff_px": 1624,
+      "diff_px": 1152,
       "rack_change": true,
       "flagged": false
     },
@@ -1461,7 +1461,7 @@
       "clip_from": 122,
       "clip_to": 123,
       "gap_sec": 18.6,
-      "diff_px": 133,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1480,7 +1480,7 @@
       "clip_from": 123,
       "clip_to": 124,
       "gap_sec": 7.2,
-      "diff_px": 19,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1499,7 +1499,7 @@
       "clip_from": 124,
       "clip_to": 125,
       "gap_sec": 12.8,
-      "diff_px": 178,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1518,7 +1518,7 @@
       "clip_from": 125,
       "clip_to": 126,
       "gap_sec": 9.7,
-      "diff_px": 90,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1613,7 +1613,7 @@
       "clip_from": 131,
       "clip_to": 132,
       "gap_sec": 25.2,
-      "diff_px": 135,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1651,7 +1651,7 @@
       "clip_from": 134,
       "clip_to": 135,
       "gap_sec": 43.1,
-      "diff_px": 35389,
+      "diff_px": 0,
       "rack_change": true,
       "flagged": false
     },
@@ -1670,7 +1670,7 @@
       "clip_from": 136,
       "clip_to": 137,
       "gap_sec": 4.8,
-      "diff_px": 49,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1727,7 +1727,7 @@
       "clip_from": 140,
       "clip_to": 141,
       "gap_sec": 11.4,
-      "diff_px": 18,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1822,7 +1822,7 @@
       "clip_from": 146,
       "clip_to": 147,
       "gap_sec": 15.6,
-      "diff_px": 168,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1841,7 +1841,7 @@
       "clip_from": 149,
       "clip_to": 150,
       "gap_sec": 4.2,
-      "diff_px": 9,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1860,7 +1860,7 @@
       "clip_from": 150,
       "clip_to": 151,
       "gap_sec": 27.7,
-      "diff_px": 1933,
+      "diff_px": 1195,
       "rack_change": true,
       "flagged": false
     },
@@ -1879,9 +1879,9 @@
       "clip_from": 154,
       "clip_to": 155,
       "gap_sec": 7.5,
-      "diff_px": 714,
+      "diff_px": 25,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 2662.4,
@@ -1917,7 +1917,7 @@
       "clip_from": 156,
       "clip_to": 157,
       "gap_sec": 4.8,
-      "diff_px": 77,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1936,9 +1936,9 @@
       "clip_from": 160,
       "clip_to": 161,
       "gap_sec": 8.4,
-      "diff_px": 324,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 2741.2,
@@ -1955,7 +1955,7 @@
       "clip_from": 161,
       "clip_to": 162,
       "gap_sec": 6.0,
-      "diff_px": 12,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -1974,7 +1974,7 @@
       "clip_from": 162,
       "clip_to": 163,
       "gap_sec": 9.0,
-      "diff_px": 97,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2050,7 +2050,7 @@
       "clip_from": 168,
       "clip_to": 169,
       "gap_sec": 6.8,
-      "diff_px": 30,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2069,7 +2069,7 @@
       "clip_from": 173,
       "clip_to": 174,
       "gap_sec": 14.3,
-      "diff_px": 415,
+      "diff_px": 335,
       "rack_change": false,
       "flagged": true
     },
@@ -2088,7 +2088,7 @@
       "clip_from": 174,
       "clip_to": 175,
       "gap_sec": 3.7,
-      "diff_px": 42,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2126,7 +2126,7 @@
       "clip_from": 177,
       "clip_to": 178,
       "gap_sec": 28.8,
-      "diff_px": 27864,
+      "diff_px": 0,
       "rack_change": true,
       "flagged": false
     },
@@ -2145,7 +2145,7 @@
       "clip_from": 180,
       "clip_to": 181,
       "gap_sec": 8.9,
-      "diff_px": 42,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2202,7 +2202,7 @@
       "clip_from": 185,
       "clip_to": 186,
       "gap_sec": 8.3,
-      "diff_px": 43,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2221,7 +2221,7 @@
       "clip_from": 186,
       "clip_to": 187,
       "gap_sec": 9.6,
-      "diff_px": 125,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2240,7 +2240,7 @@
       "clip_from": 189,
       "clip_to": 190,
       "gap_sec": 12.2,
-      "diff_px": 36,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2259,9 +2259,9 @@
       "clip_from": 190,
       "clip_to": 191,
       "gap_sec": 17.8,
-      "diff_px": 215,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 3230.6,
@@ -2278,7 +2278,7 @@
       "clip_from": 191,
       "clip_to": 192,
       "gap_sec": 7.0,
-      "diff_px": 51,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2297,7 +2297,7 @@
       "clip_from": 192,
       "clip_to": 194,
       "gap_sec": 77.5,
-      "diff_px": 1291,
+      "diff_px": 1070,
       "rack_change": true,
       "flagged": false
     },
@@ -2335,9 +2335,9 @@
       "clip_from": 195,
       "clip_to": 196,
       "gap_sec": 5.2,
-      "diff_px": 266,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 3430.7,
@@ -2354,7 +2354,7 @@
       "clip_from": 196,
       "clip_to": 197,
       "gap_sec": 5.5,
-      "diff_px": 177,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2373,7 +2373,7 @@
       "clip_from": 198,
       "clip_to": 199,
       "gap_sec": 4.8,
-      "diff_px": 131,
+      "diff_px": 0,
       "rack_change": false,
       "flagged": false
     },
@@ -2411,9 +2411,9 @@
       "clip_from": 200,
       "clip_to": 201,
       "gap_sec": 11.2,
-      "diff_px": 232,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     },
     {
       "out_time": 3534.7,
@@ -2468,9 +2468,9 @@
       "clip_from": 205,
       "clip_to": 206,
       "gap_sec": 21.4,
-      "diff_px": 452,
+      "diff_px": 0,
       "rack_change": false,
-      "flagged": true
+      "flagged": false
     }
   ]
 }

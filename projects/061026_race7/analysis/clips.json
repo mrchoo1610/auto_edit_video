@@ -396,7 +396,7 @@
     {
       "source": 0,
       "start": 585.583,
-      "end": 627.083,
+      "end": 624.0,
       "strike_t": 588.583,
       "is_break": false,
       "rack_check": "",
@@ -606,7 +606,7 @@
     {
       "source": 0,
       "start": 982.833,
-      "end": 1000.917,
+      "end": 995.417,
       "strike_t": 985.833,
       "is_break": false,
       "rack_check": "",
@@ -774,7 +774,7 @@
     {
       "source": 0,
       "start": 1266.0,
-      "end": 1276.833,
+      "end": 1282.25,
       "strike_t": 1269.0,
       "is_break": false,
       "rack_check": "",
@@ -788,7 +788,7 @@
     {
       "source": 0,
       "start": 1282.25,
-      "end": 1319.25,
+      "end": 1314.917,
       "strike_t": 1285.25,
       "is_break": false,
       "rack_check": "",
@@ -816,7 +816,7 @@
     {
       "source": 0,
       "start": 1351.917,
-      "end": 1396.917,
+      "end": 1387.917,
       "strike_t": 1354.917,
       "is_break": false,
       "rack_check": "",
@@ -1166,7 +1166,7 @@
     {
       "source": 0,
       "start": 1919.417,
-      "end": 1936.083,
+      "end": 1926.833,
       "strike_t": 1922.417,
       "is_break": false,
       "rack_check": "",
@@ -1292,7 +1292,7 @@
     {
       "source": 0,
       "start": 2104.5,
-      "end": 2125.333,
+      "end": 2113.75,
       "strike_t": 2107.5,
       "is_break": false,
       "rack_check": "",
@@ -1460,7 +1460,7 @@
     {
       "source": 0,
       "start": 2425.667,
-      "end": 2439.583,
+      "end": 2434.583,
       "strike_t": 2428.667,
       "is_break": false,
       "rack_check": "",
@@ -2244,7 +2244,7 @@
     {
       "source": 1,
       "start": 1080.0,
-      "end": 1114.667,
+      "end": 1107.167,
       "strike_t": 1083.0,
       "is_break": false,
       "rack_check": "",
@@ -2328,7 +2328,7 @@
     {
       "source": 1,
       "start": 1180.333,
-      "end": 1212.917,
+      "end": 1204.5,
       "strike_t": 1183.333,
       "is_break": false,
       "rack_check": "",
@@ -2748,7 +2748,7 @@
     {
       "source": 1,
       "start": 1893.667,
-      "end": 1922.667,
+      "end": 1904.833,
       "strike_t": 1896.667,
       "is_break": false,
       "rack_check": "",
@@ -2818,7 +2818,7 @@
     {
       "source": 1,
       "start": 2126.667,
-      "end": 2141.833,
+      "end": 2136.667,
       "strike_t": 2129.667,
       "is_break": false,
       "rack_check": "",
@@ -2888,7 +2888,7 @@
     {
       "source": 1,
       "start": 2315.917,
-      "end": 2338.917,
+      "end": 2327.667,
       "strike_t": 2318.917,
       "is_break": false,
       "rack_check": "",
@@ -2958,7 +2958,7 @@
     {
       "source": 1,
       "start": 2423.583,
-      "end": 2454.583,
+      "end": 2433.167,
       "strike_t": 2426.583,
       "is_break": false,
       "rack_check": "",

@@ -18,7 +18,7 @@ highlight 60 giây/ván: ở đây **giữ mọi cú chọc** (kể cả trượ
 
 ## CÔNG THỨC CHỐT: V5c (dùng cái này, bỏ qua quy trình âm thanh cũ ở các mục sau)
 
-Người dùng chốt công thức này ngày 13/10/2026 sau khi so V3 (âm thanh), V4/V4b (âm thanh + công thức v2), V5/V5b/V5c (chuyển động). Trận mẫu race to 3: V5c = 32.6 phút, giảm 27.7 % so với 45.1 phút gốc.
+Người dùng chốt công thức này ngày 13/10/2026 sau khi so V3 (âm thanh), V4/V4b (âm thanh + công thức v2), V5/V5b/V5c (chuyển động). Trận mẫu race to 3: V5c = 32.6 phút, giảm 27.7 % so với 45.1 phút gốc. Trận mẫu race to 7 (10 ván, 3-7): **61.4 phút (V5d), giảm 31.3 % so với 89.3 phút gốc**.
 
 | Phần | Giá trị V5c | Ghi chú |
 |---|---|---|
@@ -27,7 +27,7 @@ Người dùng chốt công thức này ngày 13/10/2026 sau khi so V3 (âm than
 | Còn hoạt động | `--move-low 0.2` | bi lăn chậm, người ngắm/đi trên bàn vẫn giữ clip |
 | Hết hoạt động | `--move-gap 2.0` | bàn yên liên tục 2 s |
 | Đệm | `--pre-roll 3 --tail 2 --merge-gap 0` | 3 s trước, 2 s sau, hai clip chồng nhau thì nối |
-| Kiểm tra mối cắt | `audit --restore` | cắt nào làm bàn đổi ≥ 200 điểm ảnh thì giữ lại cả đoạn (tối đa 30 s) |
+| Kiểm tra mối cắt | `audit --restore` | cắt nào làm bàn đổi ≥ **100** điểm ảnh (bỏ vùng đổi chạm mép nỉ: tay/cơ người ngắm) thì giữ lại cả đoạn (tối đa 30 s) |
 | Hình | `--zoom 1.3 --zoom-center cx,cy` | tâm = giữa cả bàn kể cả thành bàn (đo bằng `roi`) |
 | Chuyển cảnh | mặc định: fade hình 0.15 s + fade tiếng 0.20 s | không room tone |
 | Bảng điểm | Swiss, nhãn `MATCH POINT` / `HILL-HILL` / `FINAL`, tiếng click khi nhảy điểm | |
@@ -51,7 +51,7 @@ python -m billiards_highlight_editor.condensed render --project $P --handshake 1
 - **Thứ tự bắt buộc:** `plan`/`racks` dựng lại `clips.json` từ kết quả phát hiện và **xóa mọi `--restore` trước đó**; luôn chạy `audit --restore` lại sau chúng, rồi mới `render`. Bản sao `analysis/clips_before_restore.json` giữ trạng thái trước khi giữ lại.
 - **`audit --restore` làm gì:** đóng mối cắt bị cờ bằng cách kéo dài clip trước đến đầu clip sau (hai clip liền nhau nên không fade); cắt giữa hai file thì giữ phần cuối file 1 và phần đầu file 2. Mối cắt dài hơn `--restore-max` (30 s) chỉ báo cáo. Mối cắt giữa hai ván (xếp bi cắt chủ ý) không bao giờ bị cờ.
 - **Đa giác nỉ** mặc định suy từ `table_roi` (`FELT_REL`, đo trên camera của trận mẫu); camera khác phải kiểm lại bằng `roi` (khung xanh phải ôm đúng lòng nỉ) hoặc đặt `felt_polygon`.
-- **Chưa kiểm chứng:** V5c mới được xem kỹ ở vài đoạn của race to 3 (cú bi 8 ở 357–384 s, cú bi 7 ở cuối file 1/đầu file 2); `audit` chỉ bắt các mối cắt làm đổi bàn, không bắt cú bị cắt mà bàn trước/sau giống nhau.
+- **Chưa kiểm chứng:** V5c/V5d mới được xem kỹ ở vài đoạn (cú bi 8 ở 357–384 s, cú bi 7 ở cuối file 1/đầu file 2 của race to 3) và 14 mối cắt bị cờ của race to 7; chưa ai xem hết video. `audit` chỉ bắt các mối cắt làm đổi **bi** trong lòng nỉ, không bắt cú bị cắt mà bàn trước/sau giống nhau, và bỏ sót bi nằm sát tay/cơ hoặc sát băng.
 
 ## Yêu cầu đã chốt từ người dùng
 
@@ -276,12 +276,17 @@ python -m billiards_highlight_editor.condensed plan --project projects/<tên> --
 - **Kết quả race to 3 (V5):** 133 clip, **26.0 phút, giảm 42.4 %** so với 45.1 phút gốc; clip bi 8 (nguồn 364.8–374.5 s) có đủ ngắm → đánh → bi vào lỗ.
 - **Hạn chế:** năng lượng đo bằng số pixel đổi nên cánh tay/cây cơ thò vào nỉ cũng là "hoạt động" (giữ đoạn ngắm, chấp nhận); khi người ngắm rất lâu và đứng yên, chỗ nghỉ > 5 s bị cắt giữa lúc ngắm (V5: 363.0 → 364.8 s).
   Đa giác nỉ đo trên một camera (ROI `620,520,740,290`), camera khác phải đo lại. Chưa thử ngưỡng 1.0 ngoài 10 phút đầu và toàn trận.
-- **`audit` — kiểm tra các mối cắt (13/10/2026):** `python -m billiards_highlight_editor.condensed audit --project projects/<tên> --handshake 1` so **ảnh tĩnh lòng nỉ** ngay trước và ngay sau mỗi mối cắt (cắt ≥ `audit_min_gap_sec` = 3 s hoặc giữa hai file),
-  đếm điểm ảnh khác nhau (xám, làm mờ 5x5, ngưỡng 30, mở 5x5, chỉ trong đa giác nỉ). ≥ `audit_diff_px` = **200** thì cắt đó bị cờ (có thể một cú/bi vào lỗ đã bị cắt). Cắt giữa hai ván (đoạn xếp bi cắt chủ ý) được liệt kê nhưng không cờ.
-  Ra `analysis/gap_audit.json` và `analysis/gap_audit_sheet.jpg` (ảnh trước/sau, kèm mốc thời gian trong video). Mặc định chỉ báo cáo; thêm `--restore` để tự giữ lại (xem công thức chốt V5c).
+- **`audit` — kiểm tra các mối cắt (13/10/2026):** `python -m billiards_highlight_editor.condensed audit --project projects/<tên> --handshake 1 [--restore]` so **ảnh tĩnh lòng nỉ** ngay trước (cuối clip trước) và ngay sau (đầu clip sau)
+  mỗi mối cắt (cắt ≥ `audit_min_gap_sec` = 3 s hoặc giữa hai file). Đếm điểm ảnh khác nhau (xám, làm mờ 5x5, ngưỡng 30, mở 5x5, chỉ trong đa giác nỉ).
+  **Vùng khác biệt chạm sát mép nỉ (≤ `edge_px` = 8 px) bị bỏ nguyên cả cụm** (các mảnh cách nhau ≤ 31 px được gộp trước khi xét): tay, cánh tay, cây cơ luôn đi vào từ mép; bi dịch thì nằm bên trong.
+  ≥ `audit_diff_px` = **100** thì mối cắt bị cờ (có thể một bi đã dịch/vào lỗ trong đoạn cắt). Cắt giữa hai ván (đoạn xếp bi cắt chủ ý, `rack != to_rack`) được liệt kê nhưng không cờ.
+  Ra `analysis/gap_audit.json` và `analysis/gap_audit_sheet.jpg` (ảnh trước/sau, kèm mốc thời gian trong video; mốc tính trên bản **trước** khi khôi phục). Ngưỡng `audit_*` luôn lấy mặc định/`--diff-px`, không đọc từ `clips.json` cũ.
+  `--restore` kéo dài clip trước đến đầu clip sau (xem công thức chốt V5c).
   Vì sao không đếm bi: bộ đếm bi cũ cho số bi *tăng* ở 13/72 mối cắt (không thể xảy ra), nhiễu ±1–2 bi.
-  Thử trên V5b: cắt bi 7 đã biết (nguồn 1: 2673.7 s → nguồn 2: 19.8 s) bị cờ với 221 px (sát ngưỡng; ngưỡng 400 sẽ bỏ sót). V5b có ~15 cắt bị cờ, V5c (ngưỡng bắt đầu 0.4 %) còn 7.
-  Chưa xác nhận từng cắt bị cờ là thật (người che bàn hoặc ánh sáng cũng có thể làm đổi vài trăm điểm ảnh); cần người xem `gap_audit_sheet.jpg`.
+  **Hiệu chỉnh (race to 7, 130 mối cắt, đã xem từng cặp ảnh độ phân giải cao):** bản đầu (ngưỡng 200, không bỏ vùng mép) cờ **14** mối, trong đó **12 báo nhầm**: người ngắm đã đứng yên (chuyển động ≈ 0 nên chưa tính là hoạt động)
+  nên tay/cơ đã nằm trong lòng nỉ ở khung "sau"; 1 báo nhầm do vệt sáng ở mép nỉ; chỉ **2 thật** (bi cái dịch ~30 px; bi nâu dịch ~12 px). Bản đó khôi phục +134 s đoạn đi lại/ngắm thừa (V5c, 63.3 phút).
+  Sau khi bỏ vùng mép + gộp mảnh + ngưỡng 100: còn **2 mối cờ** (15:20.0 bi trắng xê dịch cạnh bi nâu, 125 px; 48:39.5 bi nâu dịch, 335 px), khôi phục +20 s (V5d, 61.4 phút). Nhiễu còn lại ≤ 51 px.
+  Ngưỡng cũ 221 px của cú bi 7 (V5b) vẫn trên ngưỡng mới. **Hạn chế đã biết:** mối 23:30.5 (bi cái dịch ~30 px, 155 px) không còn bị cờ vì bi nằm sát tay người chơi nên bị gộp vào cụm tay; bi sát băng cũng bị bỏ sót.
 - **Thử theo dõi riêng từng bi** (phát hiện chấm tròn, đo dịch chuyển): đúng với cú chậm (342–344 s), **bỏ sót cú bi chạy nhanh** (371.5–376 s) vì bi nhòe không còn tròn. Chưa dùng.
 
 ## Phong cách tổng hợp (condensed + công thức highlight)
@@ -328,6 +333,7 @@ Công thức `cong_thuc_cat_got_video_9_ball.md` là để dựng **highlight 3�
 - **13/10/2026 — zoom 1.3x vào bàn** (`zoom_crop`): `crop` ffmpeg đặt trước `scale` và overlay. Tâm = giữa `table_roi` (1012.mp4: x=990, y=665 trên khung 1920x1080),
   kẹp trong khung; nếu project không có `table_roi` thì cắt giữa khung. Nguồn 1080p phóng 1.3x nên hơi mềm hơn một chút [chưa đo]. Chưa xem bằng mắt trên bản render đầy đủ,
   chỉ so 1 khung ở 1.0 / 1.3 / 1.5. Người đứng sát mép trái/phải của khung có thể bị cắt một phần.
+- **13/10/2026 — chốt V5c + sửa audit (V5d).** Người dùng chốt công thức V5c (xem mục đầu). Sau khi xem 14 mối bị cờ: sửa `snapshot_diff` (bỏ vùng chạm mép nỉ, gộp mảnh, `audit_diff_px` 200 → 100) và thêm `audit --restore`; race to 7: V5c 63.3 phút → V5d 61.4 phút. Cờ mới: `audit --diff-px/--min-gap/--restore/--restore-max/--intro-sec`.
 - **Project cũ giữ cấu hình đã lưu** trong `analysis/clips.json` (`config`), nên đổi mặc định không ảnh hưởng chúng. Muốn áp dụng phải chạy lại `plan`
   (hoặc truyền `--pre-roll/--tail/--min-run/--min-still/--still-energy` thủ công), rồi chạy lại `racks` và `render`.
 
